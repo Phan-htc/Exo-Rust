@@ -1,8 +1,14 @@
 // Rewrite the factorial function using a `for` loop.
 pub fn factorial(n: u32) -> u32 {
-    todo!()
-}
+    let mut result: u32 = 1;
+    let mut counter: u32 = 0;
 
+    for _n in 1..= n {
+        counter += 1;
+        result *= counter;
+    }
+    result
+}
 #[cfg(test)]
 mod tests {
     use crate::factorial;
